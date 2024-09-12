@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"/>
+	<title>Loony Latsot: He's a mad one</title>
+	<meta name="viewport" content="width=540"/>
+	<meta name="referrer" content="no-referrer"/>
+	<style>
+    *{
+font-family: 'Helvetica';
+}
+html{ Color: #000000; Background: #E0218A; Line-Height: 1.5; Text-Align: Justify; Hyphens: Auto }
+body{ Margin: 0 Auto; Border-Style: Solid Double; Border-Width: Thin Medium; Padding: 2REM 3REM; Max-Width: 30REM; Color: #000000; Background: #F0F0F0; Box-Shadow: #000000 0 0 6REM -3REM }
+@media (Max-Width: 22REM){
+	body{ Padding: 2EM Calc(50VW - 8REM) } }
+article>header{ Border-Bottom: Double; Padding: 0 0 2REM; Color: #000000; Background: #FFFFFF7F; Box-Shadow: 0 1PX CurrentColor; Text-Align: Center; Word-Spacing: .5EX }
+article>header time{ Font-Style: Italic; Font-Variant-Caps: Titling-Caps; Text-Transform: Uppercase }
+hgroup{ Color: #000000; Background: #F0F0F0 }
+section>header{ Margin: 1.5REM 0; Break-Inside: Avoid; Break-After: Avoid; Font-Size: Smaller; Font-Variant-Caps: Titling-Caps; Text-Align: Center; Text-Transform: Uppercase }
+article>footer{ Margin: 1.5REM -.5REM 0; Border-Style: Solid Dashed Dashed; Border-Width: Thin; Padding: .5EM 1.5REM; Color: #FFFFFF; Background: #E0218A; Font-Size: Smaller }
+article>footer>*{ Margin: 1EM 0 }
+article>footer>section h3{ All: Unset; Font-Style: Italic; Font-Weight: Bold; Text-Transform: Uppercase }
+article>footer>section h3+p::before{ Content: " — " }
+article>footer>section h3+p{ Display: Inline }
+h1{ Display: Inline; Box-Decoration-Break: Clone; Background: Linear-Gradient(60DEG, #db396c, #db396c 75%, #db396c), #FFFFFF3F; Box-Shadow: 0 0 2PX #db396c, Inset 0 0 2PX #db396c; Font-Size: 1.5REM; Font-Style: Normal; Font-Variant-Caps: Titling-Caps; Letter-Spacing: Calc(1EM / 12); Word-Spacing: .35EM; Text-Transform: Uppercase; Text-Shadow: 0 0 2PX #FFFFFFBF }
+h2{ Margin: 2REM 0 .875EM; Border-Top: Double; Padding: 2REM 0 0; Color: #000000; Background: #FFFFFF7F; Box-Shadow: 0 -1PX CurrentColor; Font-Size: 1.25REM; Font-Style: Normal; Font-Variant-Caps: Normal; Line-Height: 1.75; Text-Transform: None }
+h2 *.BIG{ Font-Size: Larger; Line-Height: 1.4 }
+h2 *.SMALL{ Font-Style: Italic; Text-Decoration: #DA291C Underline }
+h3{ Margin: 1.75REM 0 .875REM; Column-Span: All; Break-After: Avoid; Font-Size: 1.125REM; Font-Weight: Inherit; Line-Height: 1; Text-Align: Center; Text-Transform: Uppercase;  Letter-Spacing: Calc(1EM / 12); Word-Spacing: .35EM }
+h4{ Margin: 1.75REM Auto .875REM -1.5REM; Border-Left: .6REM #db396c Solid; Padding: .25REM 1REM .25REM .9REM; Max-Width: Max-Content; Break-After: Avoid; Transform: Rotate(-3DEG); Color: #000000DF; Background: #FFFFFFBF; Box-Shadow: 0 0 0 1PX #000000DF, 1PX 1PX 0 1PX #000000DF; Font-Size: 1.125REM; Font-Style: Italic; Font-Weight: Inherit; Line-Height: 1; Letter-Spacing: Calc(1EM / 24); Text-Transform: Lowercase }
+h3+section>h4{ Margin-Top: 1.5REM }
+h4::after{ Content: "—" }
+#introduction{ Margin: 3REM -1.5REM; Border-Style: Double Solid Solid Double; Padding: 1.5REM; Color: #000000; Background: #FFFFFF; Font-Size: 1.075REM; Line-Height: 1.75 }
+#introduction>h3:First-Child{ Margin-Top: .875REM; }
+#introduction b{ Background-Color: #FFFFFF }
+#recipe{ Display: Flow-Root; Margin: 1.25REM 0 -1REM -2.75REM; Border-Radius: .25REM; Padding: 0 0 1REM 2.75REM; Break-Before: Page; Box-Shadow: Inset .75REM 0 .25REM -.25REM #db396c }
+#recipe h3{ Margin: 1REM 0 1REM; Font-Size: 1.25REM; Font-Style: Italic; Font-Weight: Bold }
+#recipe>section{ Position: Relative; Margin: 3REM -.75REM; Break-Inside: Avoid }
+#recipe>section h4,
+#recipe>section footer{ Position: Relative; Box-Sizing: Border-Box; Border-Style: Double Solid Solid Double; Border-Color: CurrentColor; Border-Width: Medium; Padding: .25EM .75EM; Width: Min(100%, 24REM); Max-Width: Max-Content; Color: #000000; Background: #FFFFFF; Font-Size: 1REM; Font-Style: Italic; Font-Weight: Normal; Line-Height: 1; Z-Index: 1 }
+#recipe>section h4{ Margin: -.75REM Auto -.75REM 0; Transform: None; Box-Shadow: None; Letter-Spacing: Normal; Text-Transform: None }
+#recipe>section h4::after{ Content: None }
+#recipe>section footer{ Display: Grid; Margin: -.75REM 0 -1.5REM Auto; Grid-Auto-Flow: Column; Align-Items: Center; Gap: .5EM }
+#recipe>section footer::before{ Content: "→" }
+#recipe>section h4>b{ All: Unset; Font-Weight: Bold; Text-Decoration: #DA291C Underline }
+#recipe>section>div{ Margin: 0 -.75REM; Border: Thin Solid; Padding: 1.5REM; Color: #000000; Background: #F0F0F0; Font-Size: Smaller; Font-Style: Italic }
+#recipe>section>div>strong:First-Child{ Font-Size: 1REM; Font-Style: Normal }
+#dots{ Display: Block; Position: Relative; Clear: Both; Margin: 1EM -.5REM .5EM Auto; Height: 1EM; Opacity: .75 }
+#dots:Hover{ Opacity: 1 }
+table.RESULTS{ Display: Block; Margin: 1REM 0; Line-Height: 1 }
+table.RESULTS>tbody{ Display: Grid; Margin: 1EM Auto; Grid: Auto-Flow Dense / Auto Max-Content 6EM; Gap: .5EM .25EM; Align-Items: Center }
+table.RESULTS>tbody>tr{ Display: Contents }
+table.RESULTS>tbody>tr>*{ Display: Block; Position: Relative; Padding: 0 }
+table.RESULTS>tbody>tr>*:Nth-Child(2N+0){ Padding-Left: .5EM; Grid-Column: 2 }
+table.RESULTS>tbody>tr>*:Nth-Child(2N+1){ Grid-Column: 1; Text-Align: Right }
+table.RESULTS>tbody>tr>*:Nth-Child(2N+1):Last-Child{ Display: Flex; Grid-Row-End: Span 2; Grid-Column: 3; Padding-Left: 1.5EM; Height: 100%; Flex-Direction: Column; Justify-Content: Center; Text-Align: Left }
+table.RESULTS>tbody>tr>*:Nth-Child(2N+1):Last-Child::before{ Display: Block; Box-Sizing: Border-Box; Position: Absolute; Top: 0; Bottom: 0; Left: .25EM; Border-Width: Thin; Border-Style: Solid Solid Solid None; Border-Radius: 0 .25EM .25EM 0; Width: .5EM; Content: "" }
+table.RESULTS>tbody>tr>*:Nth-Child(2N+1):Last-Child::after{ Display: Block; Position: Absolute; Top: 0; Bottom: 0; Left: .75EM; Margin: Auto; Border-Top: Thin Solid; Width: .5EM; Height: 0; Content: "" }
+table.CWARNING{ Margin: 1.5REM Auto; Border-Style: Dashed Solid Solid Double; Border-Color: #db396c; Border-Width: Thin Medium Medium; Border-Collapse: Collapse; Max-Width: 22.5REM; Break-Inside: Avoid; Color: #000000; Background: #FFFFFF }
+table.CWARNING caption{ Border-Style: Solid Solid None Double; Border-Color: #db396c; Border-Width: Thin Medium; Padding: .25EM 0 .5EM .75EM; Color: #000000; Background: Linear-Gradient(60DEG, #FFFFFF7F 40%, #db396c 140%); Font-Style: Italic; Font-Weight: Bold; Text-Align: Left; Text-Decoration: Double Underline; Text-Decoration-Skip-Ink: None }
+table.CWARNING caption::after{ Content: ":" }
+table.CWARNING tr>*{ Padding: .75EM 1.5EM 0 0; Vertical-Align: Baseline; Text-Align: Left }
+table.CWARNING tr:First-Child>*{ Padding-Top: .5EM }
+table.CWARNING tr:Last-Child>*{ Padding-Bottom: .5EM }
+table.CWARNING tr>*:First-Child{ Padding-Left: 1.5EM; Font-Weight: Bold; Text-Align: Right }
+table.CWARNING small{ Display: Block; Font-Style: Italic; Font-Weight: Normal }
+table.CWARNING tr>*:Not(:First-Child) small{ Text-Align: Justify; Text-Align-Last: Center }
+figure{ Float: Right; Margin: 1REM 0 1REM 1REM; Width: Max-Content; Max-Width: 100% }
+figcaption{ Margin: .75EM 0 0; Width: Min-Content; Min-Width: 100%; Font-Size: Smaller; Font-Style: Italic; Text-Align: Center; Text-Transform: Uppercase }
+figcaption strong{ Font-Style: Normal }
+@media (Max-Width: Calc(560PX + 7REM)) {
+	figure{ Float: None; Margin: 1REM Auto } }
+dl{ Margin: 1EM Auto; Border-Style: Double Solid Solid Double; Border-Color: #196906; Padding: .5EM 1.5EM; Max-Width: Max-Content; Overflow: Auto; Break-Inside: Avoid; Color: #000000; Background: #FFFFFF }
+dt{ Margin: .5EM 0 1EM; Font-Weight: Bold; Font-Style: Italic; Text-Align: Center; Text-Decoration: #db396c Underline }
+dd{ Margin: 0 }
+p{ Margin: 0 }
+div.DIAGRAMMED p{ Display: Inline }
+p+p,
+p+div.DIAGRAMMED,
+div.DIAGRAMMED+p,
+div.DIAGRAMMED+div.DIAGRAMMED{ Margin: 1REM 0 0 }
+b{ Box-Decoration-Break: Clone; Background: Linear-Gradient(60DEG, #ffb5cd, #ffb5cd 75%, #ffb5cd), #FFFFFF3F; Box-Shadow: 0 0 2PX #db396c, Inset 0 0 2PX #db396c; Font-Weight: Inherit; Text-Shadow: 0 0 2PX #FFFFFFBF }
+em{ Display: Block; Font-Style: Italic; Font-Weight: Bolder; Text-Align: Center; Text-Decoration: #EEAE00 Underline }
+*:Link,
+*:Visited{ Color: #004599 }
+*:Link:Active,
+*:Visited:Active,
+*.GAMMA{ Color: #CD2C00 }
+*.BETA{ Color: #004599 }
+*.TERMINAL:after{ Content: " " }
+	</style>
+	<style media="print">
+html{ Background: Transparent }
+body{ Border: None; Max-Width: None; Background: Transparent; Box-Shadow: None }
+article>header{ Background: Transparent }
+hgroup{ Background: Transparent }
+article>footer{ Color: CurrentColor; Background: Transparent }
+h1{ Background: Transparent; Margin: -1.5PX; Border-Style: Solid; Border-Width: 1PX 2PX 2PX 1PX; Padding: 0 1PX; Box-Shadow: None; Text-Shadow: None }
+h2{ Background: Transparent }
+h2 *.SMALL{ Text-Decoration-Color: CurrentColor }
+h4{ Border-Color: CurrentColor; Color: CurrentColor; Background: Transparent; Box-Shadow: Box-Shadow: 0 0 0 1PX CurrentColor, 1PX 1PX 0 1PX CurrentColor }
+#introduction{ Background: Transparent }
+#introduction b{ Background-Color: Transparent }
+#recipe{ Border-Radius: 0; Box-Shadow: Inset .25REM 0 0 0 CurrentColor }
+#recipe>section h4,
+#recipe>section footer{ Color: #000000; Background: #FFFFFF }
+#recipe>section h4>b{ Text-Decoration-Color: CurrentColor }
+#recipe>section>div{ Background: Transparent }
+#dots{ Display: None }
+table.CWARNING{ Border-Color: CurrentColor; Background: Transparent }
+table.CWARNING caption{ Border-Color: CurrentColor; Background: Linear-Gradient(60DEG, Transparent 40%, #0000001F 140%) }
+dl{ Border-Color: CurrentColor; Background: Transparent }
+dt{ Text-Decoration-Color: CurrentColor }
+b{ Background: Transparent; Margin: -1.5PX; Border-Style: Solid; Border-Width: 1PX 2PX 2PX 1PX; Padding: 0 1PX; Box-Shadow: None; Text-Shadow: None }
+em{ Text-Decoration-Color: Inherit }
+	</style>
+</head>
+<body>
+	<article>
+		<header>
+			<hgroup>
+				<h1>latsot.xyz</h1>
+				<h2><span class="BIG">R</span>obert <span class="BIG">S</span>mith <span <span class="BIG">T</span>he <span class="BIG">L</span>oony
+				</h2>
+			</hgroup>
+			<p><time datetime="2024-09">September 2024</time>.</p>
+		</header>
+		<section id="introduction">
+			<h3>Introduction</h3>
+			<p>
+				Latsot, born Robert Andrew Smith to a mother with the maiden name 'Morton' in Northallerton, North Yorkshire on the 21st day of July, 1972 is a notorious online proponent of online harassment and stalking. <span class="TERMINAL"></span>
+				He is married to Elizabeth Smith who calls herself her maiden name, Elizabeth 'Forrest'. Mrs Smith is a solicitor specialising in housing working for the firm McGarry Law LLP whilst Mr Smith is unemployed and chronically online<span class="TERMINAL">.</span>
+				Their marriage was in July of 1999, just at the turn of the new millenia<span class="TERMINAL">.</span>
+			</p>
+			<p>
+				His history being clear, <b><strong>do not harass him back.</strong></b><span class="TERMINAL"></span>
+				If you, or anyone, does anything malicious with the information on this page<span class="TERMINAL">...</span>
+				That is not my fault nor my problem<span class="TERMINAL">.</span>
+				Think about it<span class="TERMINAL">...</span>
+				It’s not reasonable to harass a stupid dimwitted lolcow who harasses children and has no shame<span class="TERMINAL">!</span>
+			</p>
+		</section>
+		</section>
+		<section id="TWEETS">
+			<header>
+				<h3>Tweets</h3>
+				<span>Robert Smith's Tweets</span>
+			</header>
+			<table class="CWARNING">
+				<caption>Content Warning</caption>
+				<tbody>
+					<tr>
+						<td>TW<small>1</small></td>
+						<td>Glorification of Violence</td>
+					</tr>
+					<tr>
+						<td>TW<small>2</small></td>
+						<td>Transphobia</td>
+					</tr>
+					<tr>
+						<td>TW<small>3</small></td>
+						<td>Racism</td>
+					</tr>
+					<tr>
+						<td>TW<small>4</small></td>
+						<td>Usage of Slurs</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				The following pieces of text are not representative of the views of the author of this website, they are tweets solely from Robert Smith's twitter account (@latsot)<span class="TERMINAL">.</span>
+				
+				<b><strong>The following is purely informational<span class="TERMINAL">.</span></b></strong>
+			</p>
+			<section id="1">
+				<h4><b>Tweet 1:</b><span class="TERMINAL"></span> Learning Skills</h4>
+				<div>
+					Everyone laughs at me for wanting to learn skills like picking locks and throwing knives. I don't understand why, it's fun<span class="TERMINAL">.</span>
+					<p>
+					<a href="https://i.postimg.cc/RFWHK8zP/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<a href="https://x.com/latsot/status/424813416264396800" rel="tw1"><cite>Link to Tweet</cite></a>
+				</div>
+				<footer>
+				</footer>
+			</section>
+			<section id="2">
+				<h4><b>Tweet 2:</b><span class="TERMINAL"></span> Family</h4>
+				<div>
+					My nephew asked me why I have so many knives. "because I like to throw them at things" didn't seem to satisfy him as an answer<span class="TERMINAL">.</span>
+					<p>
+					<a href="https://i.postimg.cc/9f6X0FcQ/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<i><strong>Tweet has been deleted</strong></i>
+				</div>
+				<footer>
+				</footer>
+			</section>
+			<section id="3">
+				<h4><b>Tweet 3:</b><span class="TERMINAL"></span> joy</h4>
+				<div>
+					@ImprobableJoe but for the joy of hitting targets, don't under-rate knives. They are a stupid weapon for theowing [throwing], but fun<span class="TERMINAL">.</span>
+					<p>
+					<a href="https://i.postimg.cc/pr2mVXBn/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<a href="https://x.com/latsot/status/386617562248658945" rel="tw1"><cite>Link to Tweet</cite></a>
+				</div>
+				<footer>
+				</footer>
+			</section>
+			<section id="4">
+				<h4><b>Tweet 4:</b><span class="TERMINAL"></span> new knives</h4>
+				<div>
+					ooh, me new knives have shipped.  oh, that's right, I might not have told @lizzyforrest that I bought more knives. I really need them<span class="TERMINAL">.</span>
+					<p>
+					<a href="https://i.postimg.cc/X74fXnvL/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<a href="https://x.com/latsot/status/191913044123717633" rel="tw1"><cite>Link to Tweet</cite></a>
+				</div>
+				<footer>
+				</footer>
+			</section>
+			<section id="5">
+				<h4><b>Tweet 5:</b><span class="TERMINAL"></span> Trope</h4>
+				<div>
+					There's this other trope, isn't there, about gender critical violence.
+
+It's a bit mad. I'm easily the most violent gender critical person I've ever met. Without a shadow of a doubt. I have violence in my heart and I am *incredibly* good at it
+<span class="TERMINAL">.</span>
+					<p>
+					<a href="https://i.postimg.cc/zB3Jxbp7/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<a href="https://x.com/latsot/status/1656346142433476624" rel="tw1"><cite>Link to Tweet</cite></a>
+				</div>
+				<footer>
+				</footer>
+			</section>
+			<section id="6">
+				<h4><b>Tweet 6:</b><span class="TERMINAL"></span> new knives</h4>
+				<div>
+					People all the time need to know this. [YouTube link] But in case violence is needed, I'm fairly good at that, too<span class="TERMINAL">.</span>
+					<p>
+					<a href="https://i.postimg.cc/pdsGJk09/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<a href="https://x.com/latsot/status/1638182994711138306" rel="tw1"><cite>Link to Tweet</cite></a>
+				</div>
+				<footer>
+				</footer>
+			</section>
+			<section id="7">
+				<h4><b>Tweet 7:</b><span class="TERMINAL"></span> good at violence</h4>
+				<div>
+					I was always really good at the old violence Maybe I should start it up again<span class="TERMINAL">.</span>
+					<p>
+					<a href="https://i.postimg.cc/zvCT0GJd/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<i><strong>Tweet has been deleted</strong></i>
+				</div>
+				<footer>
+				</footer>
+			</section>
+			<section id="8">
+				<h4><b>Tweet 8:</b><span class="TERMINAL"></span> Hale & Pace</h4>
+				<div>
+					What was going on with Hale & Pace anyway? Was it just people laughing at two retarded people and I was just too young to realise?
+					<p>
+					<a href="https://i.postimg.cc/VLR49DZj/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<a href="https://x.com/latsot/status/184222290597249024" rel="tw1"><cite>Link to Tweet</cite></a>
+				</div>
+				<footer>
+				</footer>
+			<section id="9">
+				<h4><b>Tweet 9:</b><span class="TERMINAL"></span> Dysfunctional tortillas</h4>
+				<div>
+					I should point out that there were some particularly dysfunctional tortillas on this occassion, I'm not just retarded at tortillas<span class="TERMINAL">.</span>
+					<p>
+					<a href="https://i.postimg.cc/RZ2twtm7/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<i><strong>Tweet has been deleted</strong></i>
+				</div>
+				<footer>
+				</footer>
+			<section id="10">
+				<h4><b>Tweet 10:</b><span class="TERMINAL"></span> hit him until I ran out of breath</h4>
+				<div>
+					He did exactly what I'd have done: haul him onto the floor and hit him until I ran out of breath. I had an exceptional talent for violence in the olden days but I stuck to the classics.
+
+
+					<p>
+					<a href="https://i.postimg.cc/Y02RTFh4/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<a href="https://x.com/latsot/status/1595595002419232768" rel="tw1"><cite>Link to Tweet</cite></a>
+				</div>
+				<footer>
+				</footer>
+			<section id="11">
+				<h4><b>Tweet 11:</b><span class="TERMINAL"></span> Dysfunctional tortillas</h4>
+				<div>
+					Not a boomer, dickhead. Doesn't matter who caused the problem, its yours to solve<span class="TERMINAL">.</span>
+					<p>
+					<a href="https://i.postimg.cc/P5HW7Z9d/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<i><strong>Tweet has been deleted</strong></i>
+				</div>
+				<footer>
+				</footer>
+				<section id="12">
+				<h4><b>Tweet 12:</b><span class="TERMINAL"></span> trans genocide</h4>
+				<div>
+					They want to ghoulishly use his [Brianna Ghey’s] death as an example of trans genocide.
+
+
+					<p>
+					<a href="https://i.postimg.cc/4NW4CRFn/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<a href="https://x.com/latsot/status/1625179294518460435" rel="tw1"><cite>Link to Tweet</cite></a>
+				</div>
+				<footer>
+				</footer>
+			</section>
+			<section id="13">
+				<h4><b>Tweet 13:</b><span class="TERMINAL"></span> fishnets</h4>
+				<div>
+					You wank into a fishnet sock 24 hours day while wearing a rubber suit with all zips on.
+
+
+					<p>
+					<a href="https://i.postimg.cc/W43X9gqh/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<a href="https://x.com/latsot/status/1770491460887904509" rel="tw1"><cite>Link to Tweet</cite></a>
+				</div>
+				<footer>
+				</footer>
+			<section id="14">
+				<h4><b>Tweet 14:</b><span class="TERMINAL"></span> Steal a culture</h4>
+				<div>
+					Fuck it, I'm prepared to deal with the consequences of trying to steal a culture. I say we should go for it.
+					<p>
+					<a href="https://i.postimg.cc/c1nZ98f9/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<a href="https://x.com/latsot/status/1671279389525377028" rel="tw1"><cite>Link to Tweet</cite></a>
+				</div>
+				<footer>
+				</footer>
+			<section id="15">
+				<h4><b>Tweet 15:</b><span class="TERMINAL"></span> Piss</h4>
+				<div>
+					I haven't pissed against a police van for ages. MUST TRY HARDER.
+					<p>
+					<a href="https://i.postimg.cc/vTz0qzhx/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<a href="https://x.com/latsot/status/1672590058040246275" rel="tw1"><cite>Link to Tweet</cite></a>
+				</div>
+				<footer>
+				</footer>
+			<section id="16">
+				<h4><b>Tweet 16:</b><span class="TERMINAL"></span> darkened room</h4>
+				<div>
+					Fortunately, ****** is *far* too lazy to take it beyond wanking himself to a husk in a darkened room while women tell him off on the internet.
+					<p>
+					<a href="https://i.postimg.cc/bvps899w/image.png" rel="tw1"><cite>Screenshot</cite></a>
+					<i><strong>Tweet has been deleted</strong></i>
+				</div>
+				<footer>
+				</footer>
+			</section>
+		</section>
+		
+		<section id="Full Dox">
+			<h3>Full Dox</h3>
+			<section id="Full Dox">
+				<h4>Name and D.O.B.</h4>
+					 Robert Andrew Smith born 21/07/1972
+				<h4>Address</h4>
+					 7 Shannon Lea,
+					 <p>Middleton,
+					 <div>County Durham,
+					 <div>DL2 1UX
+				<h4>Mother's Maiden Name</h4>
+					 Morton
+				<h4>Place of Birth</h4>
+					 Northallerton, North Yorkshire
+		
+			<section id="thanks">
+				<h3>Credits</h3>
+				<p>
+					Thank you to some very helpful twitter (dot) com users who helped me uncover some of Latsot's more risque history<span class="TERMINAL">.</span>
+					I’m not sure I would have gotten this all done without the help that I got from them, it wouldn’t be anywhere near as 'good' without their help<span class="TERMINAL">.</span>
+					An additional thank you also to the people who archived some of Latsot's friends' creepy posts and profiles allowing me to find their true identities.<span class="TERMINAL">
+					
+				</p>
+			</section>
+			<p>
+				<strong>Contact:</strong> <cite>Blahaj.69</cite> on <a href="https://signal.org/" rel="omg signal"><cite>Signal</cite></a><span class="TERMINAL">.</span> 
+			</p>
+			<p>
+				<cite>All content on this page, including screenshots and code</cite> is marked with the <a href="http://creativecommons.org/publicdomain/zero/1.0" rel="license noopener noreferrer"><cite>CC0 1.0 Universal Public Domain Dedication</cite></a><span style="White-Space: NoWrap"></span><span class="TERMINAL">.</span>
+				Feel free to share, print, or <a href="" download="loonylatsot.html">download this file</a><span class="TERMINAL">.</span>
+               <footer>
+               </p>
+			</section>
+			<p>
+			<section>
+                
+                I hope for this website to stay up for as long as our loony friend Latsot is alive and it serve as a reminder to not fuck with younger generations just because he thinks we're not as capable as him of being nasty</a><span class="TERMINAL">.</span>
+			</p>			
+			</section>
+			<p>
+                
+                The message to him is simple, Apologise. Stop. Repent</a><span class="TERMINAL">.</span>
+			</p>
+			<svg id="dots" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 8" stroke="#000000" stroke-width="1.8">
+				
+			</svg>
+		</footer>
+	</article>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
